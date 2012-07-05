@@ -63,7 +63,7 @@ for i=1:m
             d=norm([MNI_x MNI_y MNI_z]-active_foci(id,:));
 			p(id)=exp(-d^2/2/sigma^2)/(2*pi)^1.5/sigma^3*dv;
         end
-		if vin == 1 && varargin{1} == 'max'
+		if (vin == 1) && strcmp(varargin{1},'max')
 			pattern(i,j)=max(p);
 		else
 			pattern(i,j)=1-prod(1-p);
