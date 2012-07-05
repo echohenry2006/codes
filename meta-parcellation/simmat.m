@@ -2,7 +2,7 @@ function c=simmat(pattern,metric,method)
 % compute the similarity matrix
 % FORMAT c=simmat(pattern,metric,method)
 % metric - string vector for the distance metric,'cos' 'eu' 'cor' for options
-% method - different method to pre-process the pattern
+% method - different method to pre-process the pattern,'noall','nopca','pca'
 % simmat.m 2012-07-05 Yong Yang
 nmet=length(metric);
 if nmet == 0

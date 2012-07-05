@@ -11,7 +11,7 @@ function pattern=ma(f_roi,subject_num ,exp_num ,active_table,varargin)
 %           m :foci id in roi 
 % ma.m 2012-07-05 Yong Yang
 
-error(nargchk(4,5,nargin);
+error(nargchk(4,5,nargin));
 vin=length(varargin);
 nii=load_nii(f_roi);
 roi_img=nii.img;
