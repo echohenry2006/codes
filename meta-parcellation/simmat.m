@@ -21,22 +21,22 @@ case 'pca'
 end
 
 for i=1:nmet
-	switch metric(nmet)
+	switch metric{i}
 	case 'cos'
 		%% sc
 		y=pdist(X,'cosine');
 		c=1-squareform(y);
-		save c_cos c;
-		case 'eu'
+		save(['c_' metric(i) '_' method ], c);
+	case 'eu'
 		%% eudelidean
-		y=pdist(X),'euclidean');
+		y=pdist(X,'euclidean');
 		c=1./(squareform(y)+eps);
-		save c_eu c;
+		save(['c_' metric(i) '_' method ], c);
 	case 'cor'
 		%% correlation
 		y=pdist(X,'correlation');
 		c=1-squareform(y);
-		save ['c_' metric(nmet) '_' method] c;
+		save(['c_' metric(i) '_' method ], c);
 	otherwise
 		error('Wrong argument for metric')
 	end
