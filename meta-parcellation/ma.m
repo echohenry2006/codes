@@ -67,6 +67,7 @@ for i=1:m
 			pattern(i,j)=max(p);
 		else
 			pattern(i,j)=1-prod(1-p);
+		end
     end    
 end
 
