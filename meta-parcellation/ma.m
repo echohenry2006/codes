@@ -71,7 +71,7 @@ for i=1:m
     end    
 end
 
-if vin==1 && varargin{1} == 'max'
+if (vin==1) && strcmp(varargin{1},'max')
 	save 'pattern_revised.mat' pattern;
 else
 	save 'pattern.mat' pattern;
