@@ -29,7 +29,7 @@ for i = 1:size(ind,1)
     image_ROI(x,y,z)=index (i);
 end
 info.img = image_ROI;
-[pathstr, name, ext, versn] = fileparts(file);
+[pathstr, name, ext, versn] = fileparts(f_roi);
 f_out=['result_' pathstr '_' method '_' cluster_num '.nii'];
 save_untouch_nii(info,f_out);
    

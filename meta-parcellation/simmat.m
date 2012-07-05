@@ -26,17 +26,17 @@ for i=1:nmet
 		%% sc
 		y=pdist(X,'cosine');
 		c=1-squareform(y);
-		save(['c_' metric(i) '_' method ], c);
+		save(['c_' metric{i} '_' method ], 'c');
 	case 'eu'
 		%% eudelidean
 		y=pdist(X,'euclidean');
 		c=1./(squareform(y)+eps);
-		save(['c_' metric(i) '_' method ], c);
+		save(['c_' metric{i} '_' method ], 'c');
 	case 'cor'
 		%% correlation
 		y=pdist(X,'correlation');
 		c=1-squareform(y);
-		save(['c_' metric(i) '_' method ], c);
+		save(['c_' metric{i} '_' method ], 'c');
 	otherwise
 		error('Wrong argument for metric')
 	end
